@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    margin-top: 100px;
     padding: 0;
     line-height: 1.6;
 }
@@ -11,14 +12,20 @@ body {
     padding: 20px;
 }
 
-h1, h2, h3 {
-    color: #333;
+
+/* Header Section CSS */
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-image: url("/images/background.png");
 }
 
-p {
-    margin-bottom: 20px;
+header li{
+    font-size: larger;
 }
 
+/* FAQs Section CSS */
 .faq-item {
     margin-bottom: 20px;
 }
@@ -33,7 +40,30 @@ p {
     margin: 5px 0 0 0;
 }
 
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
+
+/* About Section CSS */
+.about h2{
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.about p{
+    font-size: larger;
+}
+
+
+/* Features Section CSS */
+.features h2{
+    font-weight: 400;
+    margin-top: 40px;
+} 
+
+.features h2::before {
+    content: "• "; /* Unicode character for bullet */
+    font-weight: bold;
+    color: black; /* Change color if needed */
+}
+
+.features p{
+    font-size: larger;
 }

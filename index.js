@@ -3,9 +3,23 @@ import express from "express";
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) =>{
+app.use(express.static("public"));//treats public as a static folder and can be navigated from anywhere.
+
+app.get("/", (req, res)=>{
     res.render("index.ejs");
 });
+
+app.get("/login", (req, res) =>{
+    res.render("login.ejs");
+});
+
+app.get("/signup", (req, res) =>{
+    res.render("signup.ejs");
+});
+
+app.get("/home", (req, res)=>{
+    res.render("home.ejs");
+})
 
 app.get("/features", (req,res) =>{
     res.render("features.ejs");
