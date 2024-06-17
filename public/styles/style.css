@@ -17,12 +17,13 @@ body {
 header{
     width: 100%;
     position: fixed;
-    top: 0;
-    background-image: url("/images/background.png");
+    top: 0;  
+    background-image: url("/images/snow-2356_256.gif"); 
+    background-size:cover;
 }
 
-header li{
-    font-size: larger;
+.nav-link{
+    font-size:x-large;
 }
 
 /* FAQs Section CSS */
@@ -31,13 +32,19 @@ header li{
 }
 
 .faq-item h3 {
-    margin: 0;
-    font-size: 1.2em;
-    color: #555;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.faq-item h3::before {
+    content: "• "; /* Unicode character for bullet */
+    font-weight: bold;
+    color: black; /* Change color if needed */
 }
 
 .faq-item p {
     margin: 5px 0 0 0;
+    font-size: larger;
 }
 
 
