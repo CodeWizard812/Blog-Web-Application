@@ -1,9 +1,12 @@
 import express from "express";
+import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
 
 app.use(express.static("public"));//treats public as a static folder and can be navigated from anywhere.
+
+app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", (req, res)=>{
     res.render("index.ejs");
@@ -20,6 +23,16 @@ app.get("/signup", (req, res) =>{
 app.get("/home", (req, res)=>{
     res.render("home.ejs");
 })
+
+app.post("/create", (req, res) =>{
+    res.render("create.ejs",{
+        postTopic: req.body["createTopic"],
+        postData: req.body["createPost"]
+    } );
+
+});
+
+
 
 app.get("/features", (req,res) =>{
     res.render("features.ejs");

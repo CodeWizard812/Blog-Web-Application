@@ -74,3 +74,19 @@ header{
 .features p{
     font-size: larger;
 }
+
+/* Home Page CSS */
+main.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+   
+main.home>div{
+    float: inline-start;
+}
+
+main.home>form{
+    float: inline-end;
+}
