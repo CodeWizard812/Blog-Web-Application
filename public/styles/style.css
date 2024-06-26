@@ -12,18 +12,26 @@ body {
     padding: 20px;
 }
 
+/* Index Page CSS */
+.index>.image{
+    float: left;
+}
 
 /* Header Section CSS */
 header{
     width: 100%;
     position: fixed;
     top: 0;  
-    background-image: url("/images/snow-2356_256.gif"); 
+    background-image: url("/images/header_background.png"); 
     background-size:cover;
 }
 
 .nav-link{
     font-size:x-large;
+}
+
+#offcanvasStartLabel{
+    font-size: x-large;
 }
 
 /* FAQs Section CSS */
@@ -79,14 +87,51 @@ header{
 main.home{
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
-   
-main.home>div{
-    float: inline-start;
+
+.home .createButton{
+    background-color: rgb(255, 100, 0);
 }
 
-main.home>form{
-    float: inline-end;
+/* Create Page CSS */
+.create .createNew{
+    background-color: #80C4E9;
+}
+
+.playwrite-au-sa-Data {
+    font-family: "Playwrite AU SA", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #FFF6E9, #ffffffb8, #eaf5f5);
+    background-size: 180% 180%;
+    animation: gradient-animation 20s ease infinite;
+}
+  
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+/* Edit Page CSS */
+main.edit{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }

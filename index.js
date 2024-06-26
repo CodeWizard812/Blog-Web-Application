@@ -32,7 +32,20 @@ app.post("/create", (req, res) =>{
 
 });
 
+app.post("/delete", (req, res) =>{
+    res.render("create.ejs",{
+        postTopic: "Deleted Successfully",
+        postData: ""
+    } );
 
+});
+
+app.post("/edit", (req, res) =>{
+    res.render("edit.ejs",{
+        editTopic: req.body["postTopic"],
+        editData: req.body["postData"]
+    });
+})
 
 app.get("/features", (req,res) =>{
     res.render("features.ejs");
